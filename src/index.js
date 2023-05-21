@@ -3,11 +3,36 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { Provider } from 'react-redux'
+
+
+
+const router = createBrowserRouter([ 
+  {
+    path: "/home",
+    element: <p>home</p>,
+  },
+  {
+    path: "/aboutus",
+    element: <p>about</p>,
+  },
+  {
+    path: "/redux",
+    element: <p>redux</p>,
+  },
+
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <p>freee</p>
+    <Provider store ={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
