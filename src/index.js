@@ -11,11 +11,16 @@ import {
 import { store } from './provider/store';
 
 import { Provider } from 'react-redux'
+import { Main } from './screen/main_page/main';
 
 
 const router = createBrowserRouter([ 
   {
     path: "/home",
+    element: <Main/>,
+  },
+  {
+    path: "/",
     element: <App/>,
   },
   
