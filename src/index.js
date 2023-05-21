@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Provider } from 'react-redux'
+import { store } from './provider/store';
 
 
 
